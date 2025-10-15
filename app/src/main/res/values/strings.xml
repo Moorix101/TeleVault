@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">TeleVault</string>
+
+    <!-- Main Screen -->
+    <string name="storage_usage">Storage Usage</string>
+    <string name="my_files">My Files</string>
+    <string name="no_files_yet">No Files Yet</string>
+    <string name="tap_to_upload">Tap the + button to upload\nyour first file to cloud</string>
+
+    <!-- File Actions -->
+    <string name="download">Download</string>
+    <string name="share_info">Share Info</string>
+    <string name="remove_from_list">Remove from List</string>
+    <string name="cancel_upload">Cancel Upload</string>
+    <string name="cancel">Cancel</string>
+
+    <!-- Messages -->
+    <string name="uploading">Uploading: %s</string>
+    <string name="downloading">Downloading: %s</string>
+    <string name="uploaded_successfully">%s uploaded successfully!</string>
+    <string name="downloaded_successfully">Downloaded: %s</string>
+    <string name="upload_failed">Upload failed: %s</string>
+    <string name="download_failed">Download failed: %s</string>
+    <string name="removed_from_list">Removed from list</string>
+
+    <!-- Permissions -->
+    <string name="permission_granted">Permission granted!</string>
+    <string name="permission_denied">Permission denied</string>
+    <string name="storage_permission_required">Storage Permission Required</string>
+    <string name="permission_message">This app needs access to all files to upload them to your Telegram cloud. Please grant \'All Files Access\' permission in the next screen.</string>
+    <string name="grant_permission">Grant Permission</string>
+    <string name="open_settings">Open Settings</string>
+
+    <!-- Dialogs -->
+    <string name="delete_file">Delete File</string>
+    <string name="remove_file">Remove File</string>
+    <string name="sort_files">Sort Files</string>
+    <string name="select_file">Select File</string>
+
+    <!-- Sort Options -->
+    <string name="sort_name_asc">Name (A-Z)</string>
+    <string name="sort_name_desc">Name (Z-A)</string>
+    <string name="sort_newest">Newest First</string>
+    <string name="sort_oldest">Oldest First</string>
+    <string name="sort_largest">Largest First</string>
+    <string name="sort_smallest">Smallest First</string>
+
+    <!-- Content Descriptions -->
+    <string name="file_icon">File icon</string>
+    <string name="file_options">File options</string>
+    <string name="add_file">Add file</string>
+    <string name="sort_files_desc">Sort files</string>
+    <string name="uploaded">Uploaded</string>
+</resources>
