@@ -110,10 +110,11 @@ The app needs to know which chat to send files to.
 
 ### Step 4: Configure the App
 
-1.  Clone this repository:
+1. Clone this repository:
     ```bash
-    git clone [https://github.com/Moorix1/TeleVault.git](https://github.com/Moorix1/TeleVault.git)
+    git clone https://github.com/Moorix101/TeleVault.git
     ```
+
 2.  Open the project in Android Studio.
 3.  Navigate to `MainActivity.java` located at `app/src/main/java/com/moorixlabs/televault/MainActivity.java`.
 4.  Find the following lines at the top of the file:
