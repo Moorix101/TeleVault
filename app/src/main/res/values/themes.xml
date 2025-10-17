@@ -1,46 +1,42 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme -->
-    <style name="AppTheme" parent="Theme.Material3.Light.NoActionBar">
-        <!-- Brand colors -->
-        <item name="colorPrimary">#6200EE</item> <!-- Indigo -->
+
+    <style name="Theme.TeleVault" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#8B5CF6</item>
         <item name="colorOnPrimary">#FFFFFF</item>
-        <item name="colorSecondary">#03DAC6</item> <!-- Teal -->
-        <item name="colorOnSecondary">#000000</item>
+        <item name="colorSecondary">#A78BFA</item>
+        <item name="colorOnSecondary">#FFFFFF</item>
 
-        <!-- Status bar and navigation bar -->
-        <item name="android:statusBarColor">?attr/colorPrimary</item>
-        <item name="android:navigationBarColor">?attr/colorPrimary</item>
-        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
 
-        <!-- Background and text -->
-        <item name="android:windowBackground">#FFFFFF</item>
-        <item name="android:textColorPrimary">#212121</item>
-        <item name="android:textColorSecondary">#757575</item>
+        <item name="android:windowBackground">#0F0F13</item>
 
-        <!-- Action Bar -->
-        <item name="actionBarStyle">@style/CustomActionBarStyle</item>
-
-        <!-- Dialogs -->
-        <item name="alertDialogTheme">@style/DialogTheme</item>
+        <item name="alertDialogTheme">@style/AppTheme.AlertDialogTheme</item>
     </style>
 
-    <!-- Custom Action Bar Style -->
-    <style name="CustomActionBarStyle" parent="Widget.Material3.Toolbar">
-        <item name="android:background">?attr/colorPrimary</item>
-        <item name="titleTextAppearance">@style/CustomActionBarTitleText</item>
+
+    <style name="AppTheme.AlertDialogTheme" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/dialog_background_shape</item>
+
+        <item name="android:textColorPrimary">#FFFFFF</item>
+
+        <item name="android:textColor">#E0E0E0</item>
+
+        <item name="android:listDivider">@drawable/dialog_divider</item>
+
+        <item name="buttonBarNegativeButtonStyle">@style/AlertDialog.ButtonStyle</item>
+        <item name="buttonBarPositiveButtonStyle">@style/AlertDialog.ButtonStyle</item>
     </style>
 
-    <!-- Action Bar Title Text -->
-    <style name="CustomActionBarTitleText" parent="TextAppearance.Material3.TitleLarge">
-        <item name="android:textColor">?attr/colorOnPrimary</item>
-        <item name="android:textStyle">bold</item>
+
+    <style name="AlertDialog.ButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:background">@drawable/dialog_button_background</item>
+
+        <item name="android:textColor">#FFFFFF</item>
+
+        <item name="android:minWidth">80dp</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
     </style>
 
-    <!-- Dialog Theme -->
-    <style name="DialogTheme" parent="Theme.Material3.Light.Dialog.Alert">
-        <item name="colorPrimary">#6200EE</item>
-        <item name="colorSecondary">#03DAC6</item>
-        <item name="android:textColorPrimary">#212121</item>
-        <item name="android:background">#FFFFFF</item>
-    </style>
 </resources>

@@ -7,23 +7,22 @@
     android:layout_marginTop="8dp"
     android:layout_marginEnd="8dp"
     android:layout_marginBottom="8dp"
+    app:cardBackgroundColor="#1C1B20"
     app:cardCornerRadius="12dp"
     app:cardElevation="3dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:orientation="vertical">
 
-        <!-- Main File Info Row -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:padding="16dp">
 
-            <!-- File Icon Container -->
             <FrameLayout
                 android:layout_width="56dp"
                 android:layout_height="56dp"
@@ -42,7 +41,6 @@
 
             </FrameLayout>
 
-            <!-- File Details -->
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -57,7 +55,7 @@
                     android:ellipsize="end"
                     android:maxLines="2"
                     android:text="Document.pdf"
-                    android:textColor="#222222"
+                    android:textColor="#FFFFFF"
                     android:textSize="15sp"
                     android:textStyle="bold" />
 
@@ -65,6 +63,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
+                    android:gravity="center_vertical"
                     android:orientation="horizontal">
 
                     <TextView
@@ -72,7 +71,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="2.5 MB"
-                        android:textColor="#777777"
+                        android:textColor="#A1A1AA"
                         android:textSize="12sp" />
 
                     <TextView
@@ -81,7 +80,7 @@
                         android:layout_marginStart="6dp"
                         android:layout_marginEnd="6dp"
                         android:text="•"
-                        android:textColor="#777777"
+                        android:textColor="#A1A1AA"
                         android:textSize="12sp" />
 
                     <TextView
@@ -89,14 +88,37 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Oct 14, 2025"
-                        android:textColor="#777777"
+                        android:textColor="#A1A1AA"
                         android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:id="@+id/layoutCloudStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="14dp"
+                            android:layout_height="14dp"
+                            android:src="@android:drawable/ic_menu_myplaces"
+                            app:tint="#66BB6A" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:text="Cloud"
+                            android:textColor="#81C784"
+                            android:textSize="11sp" />
+                    </LinearLayout>
 
                 </LinearLayout>
 
             </LinearLayout>
 
-            <!-- 3-Dot Menu Button with Better Visibility -->
             <LinearLayout
                 android:id="@+id/btnFileMenu"
                 android:layout_width="48dp"
@@ -108,38 +130,22 @@
                 android:gravity="center"
                 android:orientation="vertical">
 
-                <!-- Three dots manually created for better visibility -->
-                <View
-                    android:layout_width="6dp"
-                    android:layout_height="6dp"
-                    android:layout_marginBottom="3dp"
-                    android:background="@android:drawable/btn_default"
-                    android:backgroundTint="#666666" />
-
-                <View
-                    android:layout_width="6dp"
-                    android:layout_height="6dp"
-                    android:layout_marginBottom="3dp"
-                    android:background="@android:drawable/btn_default"
-                    android:backgroundTint="#666666" />
-
-                <View
-                    android:layout_width="6dp"
-                    android:layout_height="6dp"
-                    android:background="@android:drawable/btn_default"
-                    android:backgroundTint="#666666" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="File menu"
+                    android:src="@android:drawable/ic_menu_more"
+                    app:tint="#A1A1AA" />
 
             </LinearLayout>
 
         </LinearLayout>
 
-        <!-- Upload Progress Section (Hidden when uploaded) -->
         <LinearLayout
             android:id="@+id/layoutUploadStatus"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:background="#FFF3E0"
+            android:background="#4A3F31"
             android:orientation="vertical"
             android:padding="12dp"
             android:visibility="gone">
@@ -155,7 +161,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="⬆️ Uploading..."
-                    android:textColor="#F57C00"
+                    android:textColor="#FFCA28"
                     android:textSize="13sp"
                     android:textStyle="bold" />
 
@@ -164,7 +170,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0%"
-                    android:textColor="#F57C00"
+                    android:textColor="#FFCA28"
                     android:textSize="13sp"
                     android:textStyle="bold" />
 
@@ -178,40 +184,8 @@
                 android:layout_marginTop="10dp"
                 android:max="100"
                 android:progress="0"
-                android:progressTint="#FF9800" />
-
-        </LinearLayout>
-
-        <!-- Upload Status Badge (for completed uploads) -->
-        <LinearLayout
-            android:id="@+id/layoutUploadComplete"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:background="#E8F5E9"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:padding="8dp"
-            android:visibility="gone">
-
-            <ImageView
-                android:layout_width="18dp"
-                android:layout_height="18dp"
-                android:contentDescription="Uploaded"
-                android:src="@android:drawable/checkbox_on_background"
-                app:tint="#4CAF50" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:text="✓ Uploaded to Telegram Cloud"
-                android:textColor="#2E7D32"
-                android:textSize="12sp"
-                android:textStyle="bold" />
-
+                android:progressTint="#FFB300" />
         </LinearLayout>
 
     </LinearLayout>
-
 </androidx.cardview.widget.CardView>
