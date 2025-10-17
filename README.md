@@ -5,12 +5,12 @@
 TeleVault is an Android application that leverages the Telegram Bot API to provide a simple, effective, and free personal cloud storage solution. Upload, download, share, and manage your files securely in a private Telegram channel, all through a clean and intuitive interface.
 
 <p float="left">
-  <img src="https://github.com/Moorix101/TeleVault/blob/main/assets/screenshot1.jpeg" width="150" />
-  <img src="https://github.com/Moorix101/TeleVault/blob/main/assets/screenshot2.jpeg" width="150" />
-  <img src="https://github.com/Moorix101/TeleVault/blob/main/assets/screenshot3.jpeg" width="150" />
-  <img src="https://github.com/Moorix101/TeleVault/blob/main/assets/screenshot4.jpeg" width="150" />
-  <img src="https://github.com/Moorix101/TeleVault/blob/main/assets/screenshot5.jpeg" width="150" />
-  <img src="https://github.com/Moorix101/TeleVault/blob/main/assets/screenshot6.jpeg" width="150" />
+  <img src="https://github.com/Moorix101/TeleVault/blob/main/assets/1.jpeg" width="150" />
+  <img src="https://github.com/Moorix101/TeleVault/blob/main/assets/2.jpeg" width="150" />
+  <img src="https://github.com/Moorix101/TeleVault/blob/main/assets/3.jpeg" width="150" />
+  <img src="https://github.com/Moorix101/TeleVault/blob/main/assets/4.jpeg" width="150" />
+  <img src="https://github.com/Moorix101/TeleVault/blob/main/assets/5.jpeg" width="150" />
+  <img src="https://github.com/Moorix101/TeleVault/blob/main/assets/6.jpeg" width="150" />
 </p>
 
 
