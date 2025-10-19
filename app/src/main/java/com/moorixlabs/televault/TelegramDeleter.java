@@ -10,10 +10,9 @@ import java.net.URL;
 public class TelegramDeleter {
 
     private static final String TAG = "TelegramDeleter";
-    private static final String TELEGRAM_API_BASE = "https://api.telegram.org/bot";
-
-    private final String botToken;
-    private final String chatId;
+    private static final String TELEGRAM_API_BASE = "https://api.telegram.org/bot"; // <-- CORRECT
+    private final String botToken; // Now passed in
+    private final String chatId;   // Now passed in
     private final String messageId;
     private final DeleteCallback callback;
 
@@ -22,7 +21,7 @@ public class TelegramDeleter {
         void onDeleteFailed(String error);
     }
 
-    public TelegramDeleter(String botToken, String chatId, String messageId, DeleteCallback callback) {
+    public TelegramDeleter(String botToken, String chatId, String messageId, DeleteCallback callback) { // Updated constructor
         this.botToken = botToken;
         this.chatId = chatId;
         this.messageId = messageId;

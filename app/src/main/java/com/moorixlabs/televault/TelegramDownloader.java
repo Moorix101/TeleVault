@@ -27,7 +27,7 @@ public class TelegramDownloader {
     private static final String DOWNLOAD_FOLDER = "Download";
 
     private final Context context;
-    private final String botToken;
+    private final String botToken; // Now passed in
     private final String fileId;
     private final String fileName;
     private final DownloadCallback callback;
@@ -38,7 +38,7 @@ public class TelegramDownloader {
         void onDownloadFailed(String error);
     }
 
-    public TelegramDownloader(Context context, String botToken, String fileId,
+    public TelegramDownloader(Context context, String botToken, String fileId, // Updated constructor
                               String fileName, DownloadCallback callback) {
         this.context = context;
         this.botToken = botToken;

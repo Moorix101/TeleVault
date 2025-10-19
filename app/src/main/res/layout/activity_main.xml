@@ -37,7 +37,7 @@
                         android:id="@+id/tvStorageTitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Storage Usage"
+                        android:text="@string/storage_usage"
                         android:textColor="#FFFFFF"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -47,7 +47,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="6dp"
-                        android:text="0 Files • 0 MB"
+                        android:text="@string/storage_info_default"
                         android:textColor="#C4B5FD"
                         android:textSize="14sp" />
 
@@ -75,10 +75,14 @@
                 android:weightSum="4">
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/cardImages"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_margin="6dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
                     app:cardCornerRadius="16dp"
                     app:cardElevation="4dp"
                     app:cardBackgroundColor="#1C1B20">
@@ -109,17 +113,21 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Images"
+                            android:text="@string/images"
                             android:textColor="#A1A1AA"
                             android:textSize="11sp" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/cardVideos"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_margin="6dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
                     app:cardCornerRadius="16dp"
                     app:cardElevation="4dp"
                     app:cardBackgroundColor="#1C1B20">
@@ -150,17 +158,21 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Videos"
+                            android:text="@string/videos"
                             android:textColor="#A1A1AA"
                             android:textSize="11sp" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/cardPDFs"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_margin="6dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
                     app:cardCornerRadius="16dp"
                     app:cardElevation="4dp"
                     app:cardBackgroundColor="#1C1B20">
@@ -191,17 +203,21 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="PDFs"
+                            android:text="@string/pdfs"
                             android:textColor="#A1A1AA"
                             android:textSize="11sp" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/cardOther"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_margin="6dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
                     app:cardCornerRadius="16dp"
                     app:cardElevation="4dp"
                     app:cardBackgroundColor="#1C1B20">
@@ -232,7 +248,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Other"
+                            android:text="@string/other"
                             android:textColor="#A1A1AA"
                             android:textSize="11sp" />
                     </LinearLayout>
@@ -249,13 +265,24 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/tvFileListTitle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="My Files"
+                    android:text="@string/recent_uploads"
                     android:textColor="#FFFFFF"
                     android:textSize="18sp"
                     android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/btnSettings"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:padding="8dp"
+                    android:src="@android:drawable/ic_menu_preferences"
+                    app:tint="#A78BFA"
+                    android:contentDescription="@string/settings_title" />
 
                 <ImageButton
                     android:id="@+id/btnSort"
@@ -264,7 +291,8 @@
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:padding="8dp"
                     android:src="@android:drawable/ic_menu_sort_by_size"
-                    app:tint="#A78BFA" />
+                    app:tint="#A78BFA"
+                    android:contentDescription="@string/sort_files" />
             </LinearLayout>
 
             <LinearLayout
@@ -289,7 +317,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="No Files Yet"
+                    android:text="@string/no_files_yet"
                     android:textColor="#FFFFFF"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -299,7 +327,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:gravity="center"
-                    android:text="Tap + to upload your first file"
+                    android:text="@string/tap_to_upload_first"
                     android:textColor="#A1A1AA"
                     android:textSize="14sp" />
             </LinearLayout>
@@ -324,6 +352,7 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="24dp"
         android:src="@android:drawable/ic_input_add"
+        android:contentDescription="@string/add_file"
         app:backgroundTint="#8B5CF6"
         app:tint="#FFFFFF"
         app:elevation="8dp" />

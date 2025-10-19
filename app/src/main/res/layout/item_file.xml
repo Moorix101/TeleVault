@@ -26,18 +26,15 @@
             <FrameLayout
                 android:layout_width="56dp"
                 android:layout_height="56dp"
-                android:background="@android:color/darker_gray"
-                android:elevation="2dp">
+                android:background="@android:color/darker_gray">
 
                 <ImageView
                     android:id="@+id/ivFileIcon"
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
-                    android:layout_gravity="center"
-                    android:contentDescription="File icon"
-                    android:scaleType="fitCenter"
-                    android:src="@android:drawable/ic_menu_info_details"
-                    app:tint="#FFFFFF" />
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/content_description_file_icon"
+                    android:scaleType="centerCrop"
+                    android:src="@android:drawable/ic_menu_info_details" />
 
             </FrameLayout>
 
@@ -104,13 +101,14 @@
                             android:layout_width="14dp"
                             android:layout_height="14dp"
                             android:src="@android:drawable/ic_menu_myplaces"
-                            app:tint="#66BB6A" />
+                            app:tint="#66BB6A"
+                            android:contentDescription="@string/cloud_status"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="4dp"
-                            android:text="Cloud"
+                            android:text="@string/cloud_status"
                             android:textColor="#81C784"
                             android:textSize="11sp" />
                     </LinearLayout>
@@ -133,7 +131,7 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="File menu"
+                    android:contentDescription="@string/content_description_file_menu"
                     android:src="@android:drawable/ic_menu_more"
                     app:tint="#A1A1AA" />
 
@@ -141,50 +139,25 @@
 
         </LinearLayout>
 
+        <!-- SIMPLIFIED UPLOAD STATUS - NO PROGRESS BAR -->
         <LinearLayout
             android:id="@+id/layoutUploadStatus"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#4A3F31"
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:padding="12dp"
+            android:gravity="center_vertical"
             android:visibility="gone">
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
+                android:text="⬆️ Uploading..."
+                android:textColor="#FFCA28"
+                android:textSize="13sp"
+                android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="⬆️ Uploading..."
-                    android:textColor="#FFCA28"
-                    android:textSize="13sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/tvUploadProgress"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="0%"
-                    android:textColor="#FFCA28"
-                    android:textSize="13sp"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-            <ProgressBar
-                android:id="@+id/progressBarUpload"
-                style="?android:attr/progressBarStyleHorizontal"
-                android:layout_width="match_parent"
-                android:layout_height="6dp"
-                android:layout_marginTop="10dp"
-                android:max="100"
-                android:progress="0"
-                android:progressTint="#FFB300" />
         </LinearLayout>
 
     </LinearLayout>
