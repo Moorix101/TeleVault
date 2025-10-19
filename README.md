@@ -4,16 +4,22 @@
 
 TeleVault is an Android application that leverages the Telegram Bot API to provide a simple, effective, and free personal cloud storage solution. Upload, download, share, and manage your files securely in a private Telegram channel, all through a clean and intuitive interface.
 
-<p float="left">
+<!-- Top row: 4 images -->
+<p align="center">
   <img src="https://github.com/Moorix101/TeleVault/blob/main/assets/1.jpg" width="150" />
   <img src="https://github.com/Moorix101/TeleVault/blob/main/assets/2.jpeg" width="150" />
   <img src="https://github.com/Moorix101/TeleVault/blob/main/assets/3.jpg" width="150" />
   <img src="https://github.com/Moorix101/TeleVault/blob/main/assets/4.jpg" width="150" />
+</p>
+
+<!-- Bottom row: 3 images -->
+<p align="center">
   <img src="https://github.com/Moorix101/TeleVault/blob/main/assets/5.jpg" width="150" />
   <img src="https://github.com/Moorix101/TeleVault/blob/main/assets/6.jpg" width="150" />
-</p>
   <img src="https://github.com/Moorix101/TeleVault/blob/main/assets/7.jpg" width="150" />
 </p>
+
+
 
 ---
 
